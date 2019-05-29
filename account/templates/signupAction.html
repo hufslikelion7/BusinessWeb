@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- result 값에 따라 보여지는 화면이 다르면 됨 -->
+    <!-- -1 #false 경영대 학생이 아님, 0 #비밀번호 확인이 동일하지 않은 경우, 'result' : -2 #데이터 에러 -->
+    {% if result == -1 %}
+    <p>경영대 학생이 아님</p>
+    {% elif result == 0 %}
+    <p>비밀번호 확인이 동일하지 않은 경우 </p>
+    {% else %}
+    <p>데이터 에러</p>
+    {% endif %}
+
+</body>
+
+</html>

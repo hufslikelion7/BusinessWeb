@@ -5,20 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Document</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto');
-
         * {
             font-family: 'Roboto';
             letter-spacing: 0.05em;
             margin: 0;
             padding: 0;
         }
-
+        
         html,
         body {
             text-align: center;
@@ -26,7 +24,7 @@
             background: white;
             overflow-x: hidden;
         }
-
+        
         .register-form {
             display: inline-block;
             background: #ffffff;
@@ -39,22 +37,20 @@
             border-radius: 5px;
             position: absolute;
             left: 35%;
-
-
         }
-
+        
         .error {
             border: 1px solid #E57373;
             background-color: #FFEBEE;
         }
-
+        
         .error-text {
             text-align: left;
             padding-left: 10px;
             font-size: 0.7em;
             color: #E57373;
         }
-
+        
         h1 {
             margin: 50px 0;
             display: block;
@@ -64,39 +60,39 @@
             margin-bottom: 20px;
             font-weight: 200;
         }
-
+        
         .description {
             margin: 15px 0;
             text-align: center;
         }
-
+        
         .register-form h2 {
             font-size: 1em;
             color: #777;
             font-weight: 400;
             margin-bottom: 10px;
         }
-
+        
         .register-form input {
             padding: 15px 15px 15px 15px;
             margin: 5px 0;
             width: 260px;
             text-align: center;
         }
-
+        
         .account-setup register-form {
             text-align: center;
             left: 50%;
         }
-
+        
         .register-form input::placeholder {
             color: #aaa;
         }
-
+        
         .register-form input.error::placeholder {
             color: #555;
         }
-
+        
         .btn-primary {
             display: inline-block;
             padding: 10px 40px;
@@ -107,7 +103,7 @@
             cursor: pointer;
             position: relative;
         }
-
+        
         .account-setup,
         .finish-step,
         .user-details {
@@ -115,28 +111,28 @@
             display: inline-block;
             position: absolute;
         }
-
+        
         .account-setup {
             left: calc(50% - 175px);
             margin-bottom: 10%;
         }
-
+        
         .finish-step,
         .user-details {
             left: 1400px;
         }
-
+        
         .line {
             transition: all 1s ease-in-out;
             background: linear-gradient(to right, #6A1B9A 50%, white 50%);
             background-size: 200% 100%;
             background-position: right bottom;
         }
-
+        
         .line-active {
             background-position: left bottom;
         }
-
+        
         label {
             display: block;
             text-align: left;
@@ -144,27 +140,25 @@
             padding-left: 5px;
             color: #444;
         }
-
+        
         input[type=checkbox] {
             display: none;
         }
-
+        
         .accept-conditions {
             margin-top: 20px;
         }
-
+        
         input::placeholder {
             color: black;
         }
-
-
-
+        
         @media(max-width: 600px) {
             .step-bar {
                 display: none;
             }
         }
-
+        
         .main {
             position: relative;
             top: 10%;
@@ -172,12 +166,12 @@
             transform: translate(-50%, -50%);
             bottom: 0%;
         }
-
+        
         .main-heading {
             color: #777;
             text-transform: uppercase;
         }
-
+        
         .main-heading-primary {
             display: block;
             font-size: 5.0rem;
@@ -187,7 +181,7 @@
             animation: moveInLeft 1s ease-out;
             margin-bottom: 50px;
         }
-
+        
         .main-heading-secondary {
             font-family: sans-serif;
             display: block;
@@ -198,33 +192,29 @@
             color: rgb(89, 100, 131);
             animation: moveInRight 1s ease-out;
         }
-
+        
         @keyframes moveInLeft {
             0% {
                 opacity: 0;
                 transform: translateX(-100px);
             }
-
             80% {
                 transform: translateX(10px);
             }
-
             100% {
                 opacity: 1;
                 transform: translate(0);
             }
         }
-
+        
         @keyframes moveInRight {
             0% {
                 opacity: 0;
                 transform: translateX(100px);
             }
-
             80% {
                 transform: translateX(-10px);
             }
-
             100% {
                 opacity: 1;
                 transform: translate(0);
@@ -241,8 +231,7 @@
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">한국외국어대학교 경영대학</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -266,7 +255,30 @@
 
 
 
+    {% if result == null %}
 
+    <div class="main">
+        <h1 class="main-heading">
+            <span class="main-heading-primary">Resigter</span>
+
+        </h1>
+    </div>
+
+    <div class="account-setup register-form">
+        <h1 class="description">Create new account</h1>
+        <form method="POST" action="{% url 'signupAction' %}">
+            {% csrf_token %} {{ form.as_p }}
+            <input type="submit" value="회원가입">
+        </form>
+    </div>
+    {% elif result == -1 %}
+
+    <br><br>
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">접근권한이 없습니다.</h4>
+        <p>경영대학 학생이 아닙니다.</p>
+        <hr>
+    </div>
 
 
     <div class="main">
@@ -277,13 +289,65 @@
     </div>
 
     <div class="account-setup register-form">
-    <h1 class="description">Create new account</h1>
-    <form method="post" action="">
-            {% csrf_token %}
-            {{ form.as_p }}
+        <h1 class="description">Create new account</h1>
+        <form method="POST" action="{% url 'signupAction' %}">
+            {% csrf_token %} {{ form.as_p }}
             <input type="submit" value="회원가입">
-    </form>
+        </form>
     </div>
+
+
+    {% elif result == 0 %}
+    <br><br>
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">접근권한이 없습니다.</h4>
+        <p>비밀번호를 동일하게 입력해주세요. </p>
+        <hr>
+    </div>
+
+    <div class="main">
+        <h1 class="main-heading">
+            <span class="main-heading-primary">Resigter</span>
+
+        </h1>
+    </div>
+
+    <div class="account-setup register-form">
+        <h1 class="description">Create new account</h1>
+        <form method="POST" action="{% url 'signupAction' %}">
+            {% csrf_token %} {{ form.as_p }}
+            <input type="submit" value="회원가입">
+        </form>
+    </div>
+
+    {% else %}
+    <p>데이터 에러</p>
+
+    <br><br>
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">접근권한이 없습니다.</h4>
+        <p>데이터 오류입니다.</p>
+        <hr>
+    </div>
+
+    <div class="main">
+        <h1 class="main-heading">
+            <span class="main-heading-primary">Resigter</span>
+
+        </h1>
+    </div>
+
+    <div class="account-setup register-form">
+        <h1 class="description">Create new account</h1>
+        <form method="POST" action="{% url 'signupAction' %}">
+            {% csrf_token %} {{ form.as_p }}
+            <input type="submit" value="회원가입">
+        </form>
+    </div>
+    {% endif %}
+
+
+
 
     <!-- <script>
             alert('{{context}}');
@@ -294,8 +358,3 @@
 </body>
 
 </html>
-
-
-
-
-

@@ -3,7 +3,7 @@ from .models import Users
 from django import forms
 
 
-class SigninForm(forms.ModelForm):
+class SignupForm(forms.ModelForm):
     class Meta:
         model = Users
         fields = ['user_name', 'user_number', 'user_nickName','user_email','user_password','user_password2','user_tel']
